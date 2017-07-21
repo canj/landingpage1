@@ -91,7 +91,7 @@
                     <div class="header-content">
                         <div class="header-content-inner">
                             <h1>ThriveJive is a guided dance platform</h1>
-                            <a href="#download" class="btn btn-outline btn-xl page-scroll">Improve Your Groove!</a>
+                            <a href="#download" class="btn btn-outline btn-xl page-scroll" button id="grooveButton">Improve Your Groove!</a></button>
                         </div>
                     </div>
                 </div>
@@ -250,6 +250,20 @@
 
     <!-- Theme JavaScript -->
     <script src="js/new-age.min.js"></script>
+
+    <script type="text/javascript">
+  var button = document.getElementById('grooveButton');
+  button.addEventListener(
+    'click', 
+    function() { 
+      fbq('track', 'Lead', {
+        value: 4.99,
+        currency: 'USD' 
+      });          
+    },
+    false
+  );
+</script>
 
 </body>
 
